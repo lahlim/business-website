@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Navbar from './components/Navbar.js';
+import Body from './components/Body';
+const App = () => {
+  // Body component state and handling
+  const [item, setItem] = useState(0);
+  const handleChange = (event, value) => {
+    setItem(value);
+  };
+  // Component...
 
-function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <Body value={item} handleChange={handleChange} />
+    </>
   );
-}
+};
 
 export default App;
