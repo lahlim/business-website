@@ -6,20 +6,20 @@ import Content3 from './Content3';
 
 import Itemselect from './Itemselect';
 
-const Body = ({ value, handleChange }) => {
-  let itemToRender = <Content1 handleChange={handleChange} />;
+const Body = ({ value, handleChange, handleClick }) => {
+  let itemToRender = <Content1 handleClick={handleClick} />;
   switch (value) {
     case 0:
-      itemToRender = <Content1 handleChange={handleChange} />;
+      itemToRender = <Content1 handleClick={handleClick} />;
       break;
     case 1:
-      itemToRender = <Content2 />;
+      itemToRender = <Content2 handleClick={handleClick} />;
       break;
     case 2:
       itemToRender = <Content3 />;
       break;
     default:
-      itemToRender = <Content2 />;
+      itemToRender = <Content1 />;
   }
   return (
     <>

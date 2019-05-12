@@ -20,8 +20,8 @@ const Navbar = () => {
       <AppBar style={style.appBar} position='static' color='inherit'>
         <Toolbar style={style.tBar}>
           <Typography
-            style={{ textAlign: 'center' }}
-            variant='h4'
+            style={{ textAlign: 'center', fontFamily: 'roboto', color: '#101' }}
+            variant='h3'
             color='inherit'
           >
             Web Business Kickstart

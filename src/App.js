@@ -8,12 +8,18 @@ const App = () => {
   const handleChange = (event, value) => {
     setItem(value);
   };
-  // Component...
+  const handleClick = () => {
+    setItem(2);
+  };
 
   return (
     <>
       <Navbar />
-      <Body value={item} handleChange={handleChange} />
+      <Body
+        value={item}
+        handleClick={handleClick}
+        handleChange={handleChange}
+      />
     </>
   );
 };
